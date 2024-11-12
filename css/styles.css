@@ -4,7 +4,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: black;
     line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 header, footer {
@@ -50,6 +55,29 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/*loading screen*/
+#loading-screen {
+    text-align: center;
+}
+
+.loading-bar {
+    width: 50px;
+    height: 5px;
+    background-color: #ecf0f1;
+    animation: loading 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes loading {
+    0% { width: 0; }
+    100% { width: 50px; }
+}
+
+.loading-text {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /*Mobile devices*/
