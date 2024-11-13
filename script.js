@@ -1,3 +1,4 @@
+//load page when website is opened
 document.addEventListener("DOMContentLoaded", () => {
     const loadingText = document.getElementById("loading-text");
     const titles = ["photographer", "graphic designer", "web designer and developer", "writer & editor"];
@@ -15,3 +16,32 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("homepage-content").style.display = "block";
     }, 5000); // Set a time for the loading screen to disappear
 });
+
+//project gallery on homepage
+const carousels = {
+    exercises: { index: 0 },
+    assignments: { index: 0 },
+    others: { index: 0 }
+};
+
+function showSlide(sectionId) {
+    const carousel = document.getElementById(sectionId);
+    const items = carousel.querySelectorAll('.carousel-item');
+    const currentIndex = carousels[sectionId].index;
+
+    items.forEach((item, index) => {
+        item.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+}
+
+function nextSlide(sectionId) {
+    const items = document.getElementById(sectionId).querySelectorAll('.carousel-item');
+    carousels[sectionId].index = (carousels[sectionId].index + 1) % items.length;
+    showSlide(sectionId);
+}
+
+function previousSlide(sectionId) {
+    const items = document.getElementById(sectionId).querySelectorAll('.carousel-item');
+    carousels[sectionId].index = (carousels[sectionId].index - 1 + items.length) % items.length;
+    showSlide(sectionId);
+}
