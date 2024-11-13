@@ -81,11 +81,6 @@ footer {
 }
 
 /*project gallery*/
-#project-gallery {
-    width: 90%;
-    max-width: 800px;
-}
-
 .carousel-box {
     background-color: #fff;
     border: 1px solid #ddd;
