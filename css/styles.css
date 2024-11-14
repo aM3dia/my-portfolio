@@ -6,10 +6,6 @@ body {
     background-color: #f4f4f4;
     color: black;
     line-height: 1.6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
 }
 
 header, footer {
@@ -117,6 +113,54 @@ footer {
 
 .carousel-btn:hover {
     background-color: #0056b3;
+}
+
+/*contact page*/
+.intro h1, .intro p {
+    margin-bottom: 20px;
+}
+
+#contact-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.half {
+    width: 48%;
+}
+
+#our-information ul {
+    list-style: none;
+    padding: 0;
+}
+
+#our-information ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
 }
 
 /*Mobile devices*/
