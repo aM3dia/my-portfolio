@@ -11,6 +11,7 @@ body {
 header {
     position: sticky;
     top: 0;
+    margin-bottom: 20px;
 }
 
 header, footer {
@@ -54,6 +55,7 @@ section {
 
 footer {
     bottom: 0;
+    margin-top: 20px;
 }
 
 /*loading screen*/
@@ -142,22 +144,25 @@ img {
 }
 
 /*contact page*/
-.intro h1, .intro p {
-    margin-bottom: 20px;
+#contact-intro {
+    text-align: center;
+    margin: auto;
 }
 
 #contact-us {
     display: flex;
-    justify-content: space-around;
-    align-items: start;
     gap: 20px;
-    padding: 20px;
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
 }
 
-.half {
-    width: 48%;
+.left {
+    width: 30%;
+    background-image: linear-gradient(to bottom right, #028090, #F7B32B);
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0;
 }
 
 #our-information ul {
@@ -166,8 +171,13 @@ img {
 }
 
 #our-information ul li a {
-    color: #333;
+    color: white;
     text-decoration: none;
+}
+
+.right {
+    width: 70%;
+    padding: 20px;
 }
 
 form {
@@ -187,6 +197,23 @@ form input, form textarea {
 form textarea {
     height: 100px;
     resize: none;
+}
+
+/*form validation*/
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
 }
 
 /*Mobile devices*/

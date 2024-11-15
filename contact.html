@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="script.js" defer></script>
-    <title>Contact Us</title>
+    <title>Contact</title>
 </head>
 <body>
+    <!--header section-->
     <header>
         <h1>Anupa Ragoonanan</h1>
         <nav>
@@ -20,40 +22,49 @@
         </nav>
     </header>
     <main>
-        <section class="intro">
+        <!--page intro-->
+        <div id="contact-intro">
             <h1>Let's Connect</h1>
             <p>Have a question? Need to get in touch? Leave a message!</p>
-        </section>
+        </div>
+
+        <!--left side div-->
         <section id="contact-us">
-            <div class="half" id="our-information">
-                <h2>Connect with Us</h2>
-                <p>Follow us on social media:</p>
+            <div class="left" id="our-information">
+                <h2>Connect with Anupa!</h2>
+                <p>Aside from web design and development, I love photography!</p>
                 <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
+                    <li><i style="font-size:20px; margin:5px" class="fa fa-linkedin"></i><a href="https://www.linkedin.com/in/anuparragoonanan/" target="_blank">LinkedIn</a></li>
+                    <li><i style="font-size:20px; margin:5px" class="fa fa-instagram"></i><a href="https://www.instagram.com/anupa.media.wildlife/" target="_blank">Wildlife</a></li>
+                    <li><i style="font-size:20px; margin:5px" class="fa fa-instagram"></i><a href="https://www.instagram.com/anupa.media.portraits/" target="_blank">Portrait</a></li>
+                    <li><i style="font-size:20px; margin:5px" class="fa fa-instagram"></i><a href="https://www.instagram.com/anupa.media/" target="_blank">Other Media</a></li>
                 </ul>
+
             </div>
-            <div class="half" id="contact-form">
+            <!--right side div-->
+            <div class="right" id="contact-form">
                 <form>
                     <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" id="fname" name="fname" required>
 
                     <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lname">
+                    <input type="text" id="lname" name="lname" required>
 
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email">
+                    <input type="text" id="email" name="email" required>
 
                     <label for="phone">Phone Number</label>
-                    <input type="text" id="phone" name="phone">
+                    <input type="text" id="phone" name="phone" required>
 
                     <label for="message">Message</label>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea id="message" name="message"></textarea required>
+
+                    <button type="submit" id="message" class="send-btn">Send</button>
                 </form>
             </div>
         </section>
     </main>
+    <!--footer-->
     <footer>
         <p>&copy; 2024 Anupa Ragoonanan</p>
     </footer>

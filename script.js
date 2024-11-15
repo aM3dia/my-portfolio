@@ -7,14 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const cycleText = setInterval(() => {
         loadingText.textContent = titles[index];
         index = (index + 1) % titles.length;
-    }, 1000); // Change every second
+    }, 1000); //timer for text change
 
-    // Simulate loading time
+    //loading time
     setTimeout(() => {
         clearInterval(cycleText);
         document.getElementById("loading-screen").style.display = "none";
         document.getElementById("homepage-content").style.display = "block";
-    }, 5000); // Set a time for the loading screen to disappear
+    }, 5000); //time for loading screen to disappear
 });
 
 //project gallery on homepage
@@ -45,3 +45,41 @@ function previousSlide(sectionId) {
     carousels[sectionId].index = (carousels[sectionId].index - 1 + items.length) % items.length;
     showSlide(sectionId);
 }
+
+//form validation
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector("form");
+    
+    form.addEventListener("submit", function(event) {
+        let valid = true;
+        //field validation
+        const fields = [
+            {id: "fname", message: "First name is required."},
+            {id: "lname", message: "Last name is required."},
+            {id: "email", message: "Please enter a valid email.", pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ },
+            {id: "phone", message: "Please enter a valid phone number.", pattern: /^[0-9]{10}$/ },
+            {id: "message", message: "Message cannot be empty."}
+        ];
+        //validation loop
+        fields.forEach(field => {
+            const input = document.getElementById(field.id);
+            const value = input.value.trim();
+
+            if (!value || (field.pattern && !field.pattern.test(value))) {
+                showError(input, field.message);
+                valid = false;
+            }
+        });
+        //prevent submit for invalid form
+        if (!valid) {
+            event.preventDefault();
+        }
+    });
+    function showError(element, message) {
+        const error = document.createElement("div");
+        error.className = "error-message";
+        error.style.color = "red";
+        error.textContent = message;
+        element.insertAdjacentElement("afterend", error);
+    }
+});
