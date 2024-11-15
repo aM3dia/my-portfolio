@@ -136,6 +136,11 @@ footer {
     transform: rotateY(0deg); /*reveal the back*/
 }
 
+/*page jump*/
+#exercise-projects, #assign-projects, #other-projects {
+    scroll-margin-top: 150px;
+}
+
 /*contact form on homepage*/
 .contact {
     text-align: center;
@@ -177,6 +182,15 @@ img {
     height: 400px;
     overflow: hidden;
     object-fit: cover;
+}
+
+/*projects page*/
+#project-intro {
+    text-align: center;
+}
+
+.project-section {
+    padding-left: 20px;
 }
 
 /*contact page*/
