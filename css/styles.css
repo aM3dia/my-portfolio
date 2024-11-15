@@ -3,16 +3,25 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #D8DAD3;
     color: black;
     line-height: 1.6;
 }
 
+header {
+    position: sticky;
+    top: 0;
+}
+
 header, footer {
-    background-color: #333;
+    background-color: #4A4A48;
     color: white;
     padding: 20px;
     text-align: center;
+}
+
+h1 {
+    margin: 0;
 }
 
 nav ul {
@@ -43,14 +52,8 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #333;
-}
-
 footer {
-    position: fixed;
     bottom: 0;
-    width: 100%;
 }
 
 /*loading screen*/
@@ -61,7 +64,7 @@ footer {
 .loading-bar {
     width: 50px;
     height: 5px;
-    background-color: #ecf0f1;
+    background-color: #000000;
     animation: loading 1s linear infinite;
     margin: 20px auto;
 }
@@ -80,15 +83,17 @@ footer {
 .project-boxes {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 20px 0;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .project-box {
-    width: 30%;
-    height: 200px;
-    perspective: 1000px; /* Enable 3D effect for flip */
+    width: calc(33.333% - 20px); /*equal boxes*/
+    height: 300px;
     position: relative;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .project-front,
@@ -97,7 +102,7 @@ footer {
     justify-content: center;
     align-items: center;
     height: 100%;
-    backface-visibility: hidden; /* Prevent the back side from showing */
+    backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -105,41 +110,35 @@ footer {
     bottom: 0;
     text-align: center;
     padding: 10px;
-    border: 2px solid #333;
+    border: 2px solid #000000;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-front {
-    background-color: #007bff;
-    color: white;
+    background-color: #80CED7;
     font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .project-back {
     background-color: #f4f4f4;
-    color: #333;
-    transform: rotateY(180deg); /* Initially hide the back side */
-}
-
-.project-box:hover .project-front {
-    transform: rotateY(180deg); /* Flip the front on hover */
+    transform: rotateY(180deg); /*hide the back*/
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-box:hover .project-back {
-    transform: rotateY(0deg); /* Reveal the back on hover */
+    transform: rotateY(0deg); /*reveal the back*/
 }
 
-.view-project-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.view-project-btn:hover {
-    background-color: #0056b3;
+/*about page*/
+img {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    object-fit: cover;
 }
 
 /*contact page*/
@@ -205,5 +204,9 @@ form textarea {
     section {
         padding: 10px;
         margin: 10px;
+    }
+
+    .project-box {
+        width: 100%;
     }
 }
