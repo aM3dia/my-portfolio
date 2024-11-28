@@ -209,6 +209,14 @@ main {
     margin: 0;
 }
 
+#projects a {
+    color: black;
+}
+
+#projects a:hover {
+    color: blue;
+}
+
 .project-scroll {
     position: relative;
     display: flex;
