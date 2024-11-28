@@ -18,8 +18,8 @@ header {
 header, footer {
     background-color: #4A4A48;
     color: white;
-    padding: 20px;
     text-align: center;
+    padding: 5px;
 }
 
 h1 {
@@ -62,6 +62,7 @@ footer {
 /*loading screen*/
 #loading-screen {
     text-align: center;
+    margin: 400px;
 }
 
 .loading-bar {
@@ -184,6 +185,10 @@ img {
 }
 
 /*projects page*/
+#project-intro p {
+    padding: 0 400px;
+}
+
 #project-intro {
     text-align: center;
 }
