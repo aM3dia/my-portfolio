@@ -51,7 +51,7 @@ section {
     padding: 20px;
     margin: 20px;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -178,11 +178,18 @@ footer {
 }
 
 /*about page*/
-img {
+main {
+    margin: 0 150px;
+}
+
+#about-me img {
     width: 400px;
     height: 400px;
     overflow: hidden;
     object-fit: cover;
+    border-radius: 10px;
+    float: left;
+    margin: 0 20px 20px 0;
 }
 
 /*projects page*/
@@ -232,12 +239,6 @@ img {
     margin: 0 15px;
     overflow: hidden;
 }
-
-/*
-.project-section {
-    padding-left: 20px;
-}
-*/
 
 /*contact page*/
 #contact-intro {
