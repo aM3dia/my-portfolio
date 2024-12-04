@@ -1,0 +1,73 @@
+/*contact page*/
+#contact-intro {
+    text-align: center;
+    margin: auto;
+}
+
+#contact-us {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.left {
+    width: 30%;
+    background-image: linear-gradient(to bottom right, #028090, #F7B32B);
+    color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0;
+}
+
+#our-information ul {
+    list-style: none;
+    padding: 0;
+}
+
+#our-information ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.right {
+    width: 70%;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+/*form validation*/
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+button#message.send-btn {
+    padding: 10px;
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+}
