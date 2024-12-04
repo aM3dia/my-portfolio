@@ -52,4 +52,14 @@
     position: relative;
     margin: 0 15px;
     overflow: hidden;
+    padding: 10px;
+}
+
+.exercises p, .assigns p, .others p {
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.exercises:hover, .assigns:hover, .others:hover {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0);
 }
