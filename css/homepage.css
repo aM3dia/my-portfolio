@@ -50,19 +50,22 @@ h2 {
 }
 
 #exercise-box .project-front {
-    background-image: url('/images/HTML.jpg');
+    background-image: url('../images/HTML.jpg');
     background-size: cover;
+    background-color: #D8DAD3;
 }
 
 #assignment-box .project-front {
-    background-image: url('/images/JS.jpg');
+    background-image: url('../images/JS.jpg');
     background-size: cover;
+    background-color: #D8DAD3;
 }
 
 
 #other-box .project-front {
-    background-image: url(/images/Java.jpg);
+    background-image: url('../images/Java.jpg');
     background-size: cover;
+    background-color: #D8DAD3;
 }
 
 .project-front,
