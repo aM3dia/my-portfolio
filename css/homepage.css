@@ -1,0 +1,170 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+/*about section*/
+#about {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+h2 {
+    font-size: 5em;
+    margin: 0;
+    text-shadow: 0 0 20px rgba(255, 255, 255);
+}
+
+#about a {
+    color: white;
+}
+
+#about a:hover {
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(255, 255, 255);
+}
+
+/*project gallery*/
+#project-gallery {
+    border-radius: 0;
+    width: auto;
+    margin: 0;
+    color: white;
+}
+
+.project-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-box {
+    width: calc(33.333% - 20px); /*equal boxes*/
+    height: 300px;
+    position: relative;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#exercise-box .project-front {
+    background-image: url('/images/HTML.jpg');
+    background-size: cover;
+}
+
+#assignment-box .project-front {
+    background-image: url('/images/JS.jpg');
+    background-size: cover;
+}
+
+
+#other-box .project-front {
+    background-image: url(/images/Java.jpg);
+    background-size: cover;
+}
+
+.project-front,
+.project-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-front {
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0);
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.project-back {
+    background-color: #D8DAD3;
+    color: black;
+    transform: rotateY(180deg); /*hide the back*/
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-box:hover .project-back {
+    transform: rotateY(0deg); /*reveal the back*/
+}
+
+.view-project-btn {
+    color: black;
+}
+
+.view-project-btn:hover {
+    font-weight: 600;
+    text-shadow: 0 0 10px rgba(0, 0, 0);
+    color: white;
+}
+
+/*page jump*/
+#exercise-projects, #assign-projects, #other-projects {
+    scroll-margin-top: 150px;
+}
+
+/*contact form*/
+.contact {
+    text-align: center;
+}
+
+form {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+}
+
+.form-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-column {
+    flex: 1;
+}
+
+#contact {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+#message {
+    width: auto;
+}
+
+.send-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: left;
+}
+
+#message.send-btn {
+    width: 100px;
+    text-align: center;
+}

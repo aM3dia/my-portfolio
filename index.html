@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Orbitron:wght@400..900&display=swap');
+        </style>
     <script src="script.js" defer></script>
 </head>
 <body id="homepage">
@@ -31,14 +35,20 @@
     <section id="about">
         <div>
         <h2>About me</h2>
-        <p>My name is Anupa Ragoonanan. I am a digital communicator - graduate of Humber's Media Communications (2022) and Bachelor of Digital Communications (2024) programs. Ever since I was small, I loved photography and visual arts. This factored into a lot of my education and professional choices. I now do freelance photography, graphic design,  web design & development, and content writing for individuals. My main goal is to develop my photography professionally while also working a full-time job in the web design industry.</p>
+        <p>
+            My name is Anupa Ragoonanan. 
+            I am a digital communicator - graduate of Humber's Media Communications (2022) and Bachelor of Digital Communications (2024) programs. 
+            Ever since I was small, I loved photography and visual arts. 
+            This factored into a lot of my education and professional choices. 
+            I now do freelance photography, graphic design,  web design & development, and content writing for individuals. 
+            My main goal is to develop my photography professionally while also working a full-time job in the web design industry.
+        </p>
         <a href="about.html">Read more about my journey</a>
         </div>
     </section>
 
     <!--projects section-->
     <section id="project-gallery">
-        <h2>Projects</h2>
         <div class="project-boxes">
             
             <!--exercise projects-->
@@ -98,7 +108,7 @@
                     </div>
                 </div>
                 <label for="message">Message</label>
-                <textarea id="message" name="message"></textarea required>
+                <textarea id="message" rows="10" name="message"></textarea required>
 
                 <button type="submit" id="message" class="send-btn">Send</button>
             </form>
