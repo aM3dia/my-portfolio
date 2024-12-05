@@ -101,6 +101,10 @@ h2 {
     flex-direction: column;
 }
 
+.project-back p {
+    margin-bottom: 0;
+}
+
 .project-box:hover .project-back {
     transform: rotateY(0deg); /*reveal the back*/
 }
@@ -170,4 +174,29 @@ input {
 #message.send-btn {
     width: 100px;
     text-align: center;
+}
+
+/*Mobile devices*/
+@media only screen and (max-width: 1000px) {
+    #contact {
+        margin: 20px 50px;
+    }
+
+    .project-boxes {
+        flex-direction: column !important;
+    }
+
+    .project-box {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #about {
+        margin: 5%;
+    }
+
+    #contact input {
+        width: 70%;
+    }
 }

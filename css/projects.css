@@ -9,12 +9,16 @@ h2 {
 
 /*projects page*/
 #project-intro p {
-    padding: 0 500px;
+    margin: 0 20%;
     color: white;
 }
 
 #project-intro {
     text-align: center;
+}
+
+#exercises, #assignments, #others {
+    margin: 20px 20px;
 }
 
 #projects {
@@ -77,4 +81,11 @@ h2 {
 
 .exercises:hover, .assigns:hover, .others:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0);
+}
+
+/*Mobile devices*/
+@media only screen and (max-width: 750px) {
+    #project-intro p {
+        margin: 0 5%;
+    }
 }

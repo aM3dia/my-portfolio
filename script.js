@@ -89,3 +89,18 @@ document.addEventListener("DOMContentLoaded", function() {
         errorMessages.forEach(error => error.remove());
     }
 });
+
+//responsive design for mobile devices
+document.querySelectorAll('.project-box').forEach((box) => {
+    box.addEventListener('click', () => {
+        // Remove active class from other boxes
+        document.querySelectorAll('.project-box.active').forEach((activeBox) => {
+            if (activeBox !== box) {
+                activeBox.classList.remove('active');
+            }
+        });
+
+        // Toggle active class on the clicked box
+        box.classList.toggle('active');
+    });
+});
