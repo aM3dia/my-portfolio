@@ -56,10 +56,12 @@ document.addEventListener("DOMContentLoaded", function() {
         const fields = [
             {id: "fname", message: "First name is required."},
             {id: "lname", message: "Last name is required."},
-            {id: "email", message: "Please enter a valid email.", pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ },
-            {id: "phone", message: "Please enter a valid phone number.", pattern: /^[0-9]{10}$/ },
+            {id: "email", message: "Please enter a valid email.", pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/},
+            {id: "phone", message: "Please enter a valid phone number.", pattern: /^\(\d{3}\)\d{3}\d{4}$/},
             {id: "message", message: "Message cannot be empty."}
         ];
+        // Remove existing error messages
+        removeErrorMessages();
         //validation loop
         fields.forEach(field => {
             const input = document.getElementById(field.id);
@@ -81,5 +83,9 @@ document.addEventListener("DOMContentLoaded", function() {
         error.style.color = "red";
         error.textContent = message;
         element.insertAdjacentElement("afterend", error);
+    }
+    function removeErrorMessages() {
+        const errorMessages = document.querySelectorAll(".error-message");
+        errorMessages.forEach(error => error.remove());
     }
 });
