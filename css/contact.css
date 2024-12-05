@@ -11,7 +11,7 @@
     margin: auto;
 }
 
-.left {
+.right {
     width: 30%;
     background-image: linear-gradient(to bottom right, #028090, #F7B32B);
     color: white;
@@ -20,7 +20,7 @@
     margin: 0;
 }
 
-.left p {
+.right p {
     font-size: 1em;
 }
 
@@ -35,7 +35,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.right {
+.left {
     width: 70%;
     padding: 20px;
 }
@@ -80,4 +80,20 @@ button#message.send-btn {
     cursor: pointer;
     width: 100px;
     text-align: center;
+}
+
+/*Mobile devices*/
+@media only screen and (max-width: 1000px) {
+    #contact-us {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    #contact-us .right {
+        width: auto;
+    }
+
+    #contact-us .left {
+        margin: auto;
+    }
 }
