@@ -1,6 +1,16 @@
+body {
+    background-color: black;
+}
+
+h2 {
+    color: white;
+    text-shadow: 0 0 20px rgba(255, 255, 255);
+}
+
 /*projects page*/
 #project-intro p {
-    padding: 0 400px;
+    padding: 0 500px;
+    color: white;
 }
 
 #project-intro {
@@ -38,6 +48,10 @@
     overflow-x: auto;
 }
 
+#exercises, #assignments, #others {
+    background-color: #D8DAD3;
+}
+
 .exercises, .assigns, .others {
     border: 3px solid black;
     border-radius: 20px;
@@ -53,6 +67,7 @@
     margin: 0 15px;
     overflow: hidden;
     padding: 10px;
+    background-color: white;
 }
 
 .exercises p, .assigns p, .others p {
